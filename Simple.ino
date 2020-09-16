@@ -1,11 +1,6 @@
 
 
 #include <Arduino_LSM9DS1.h>
-//#define blueLED 22
-//#define redLED 25
-//#define greenLED 26
-//#define yellowLED 20
-//#define whiteLED 1
 const int greenLEDpin = 8;
 const int redLEDpin1 = 7;
 const int yellowLEDpin2 = 2;
@@ -69,22 +64,15 @@ void loop() {
             digitalWrite(blueLEDpin3, LOW);
             digitalWrite(yellowLEDpin2, LOW);
             digitalWrite(whiteLEDpin4, LOW);
-            }
-//     else if (acceleration_y >= 1-delta){
-//            digitalWrite(greenLEDpin, LOW);
-//            digitalWrite(redLEDpin1, HIGH);
-//            digitalWrite(blueLEDpin3, HIGH);
-//            digitalWrite(yellowLEDpin2, LOW);
-//            digitalWrite(whiteLEDpin4, LOW);
-//           }
-        else if (acceleration_y < -delta && acceleration_y > delta-1){//pitch right 
+           }
+     else if (acceleration_y < -delta && acceleration_y > delta-1){//pitch right 
             digitalWrite(greenLEDpin, LOW);
             digitalWrite(redLEDpin1, LOW);
             digitalWrite(blueLEDpin3, HIGH);
             digitalWrite(yellowLEDpin2, HIGH);
             digitalWrite(whiteLEDpin4, LOW);
              }
-          else{
+     else{
             digitalWrite(greenLEDpin, HIGH);
             digitalWrite(redLEDpin1, HIGH);
             digitalWrite(blueLEDpin3, LOW);
