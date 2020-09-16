@@ -18,10 +18,6 @@ float angle_pitch, angle_roll;
 int angle_pitch_buffer, angle_roll_buffer;
 float angle_pitch_output, angle_roll_output;
 
-// Setup timers and temp variables
-long loop_timer;
-int temp;
-
 
 void setup() {
 
@@ -58,9 +54,6 @@ void setup() {
 
   // Start Serial Monitor
   Serial.begin(115200);
-
-  // Init Timer
-  loop_timer = micros();
 
 }
 
@@ -127,8 +120,6 @@ void loop() {
   Serial.print(" | Angle  = "); Serial.println(angle_pitch_output);
 
   // Check Angle for Level LEDs
-//
-//  if (true){
   
   if (angle_pitch_output < -2.01) {
     // Turn on Level LED
